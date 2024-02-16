@@ -41,14 +41,14 @@ int partition(int *array, int lo, int hi, size_t size)
   */
 void lomuto_qsort(int *array, int lo, int hi, size_t size)
 {
-        int p = 0;
+	int p = 0;
 
-        if (lo < hi)
-        {
-                p = partition(array, lo, hi, size);
-                lomuto_qsort(array, lo, p - 1, size);
-                lomuto_qsort(array, p + 1, hi, size);
-        }
+	if (lo < hi)
+	{
+		p = partition(array, lo, hi, size);
+		lomuto_qsort(array, lo, p - 1, size);
+		lomuto_qsort(array, p + 1, hi, size);
+	}
 }
 
 /**
